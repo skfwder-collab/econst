@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Theory: Strategic Interactions, Equilibrium, and Economic Policy | Siwat Teimtad</title>
+  <meta name="description" content="A comprehensive analysis of Game Theory in economics, covering Nash Equilibrium, Prisoner's Dilemma, Dynamic Games, Mechanism Design, and Macroeconomic Applications.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../black.png">
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand-link">
+        <img src="../black.png" alt="Siwat Teimtad Logo" class="brand-logo">
+        <span>Siwat Teimtad <span class="brand-tag">/ Economist</span></span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#projects" class="active">Research</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact" class="nav-badge-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Essay Content -->
+  <main class="essay-page">
+    <article class="container container-prose">
+      <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="../index.html#projects">Research & Projects</a>
+        <span>/</span>
+        <span>Game Theory & Strategic Mechanisms</span>
+      </div>
+
+      <header class="essay-header">
+        <div class="project-meta">
+          <span class="tag tag-cyan">Microeconomic Theory</span>
+          <span class="tag tag-emerald">Strategic Interaction</span>
+          <span class="tag tag-metric">~1,600 Words</span>
+          <span class="tag tag-metric">8 min read</span>
+        </div>
+        <h1 class="essay-title">Game Theory: Strategic Interaction, Equilibrium Concepts, and Economic Mechanisms</h1>
+        <div class="essay-meta-bar">
+          <span>By <strong class="essay-author">Siwat Teimtad</strong></span>
+          <span>•</span>
+          <span>Published in Applied Mathematical Economics</span>
+          <span>•</span>
+          <span>Core Research Series</span>
+        </div>
+      </header>
+
+      <!-- Table of Contents -->
+      <aside class="toc-box">
+        <div class="toc-title">Table of Contents</div>
+        <ul class="toc-list">
+          <li><a href="#foundations">1. Foundations: The Mathematical Architecture of Strategy</a></li>
+          <li><a href="#formal-elements">2. The Formal Anatomy of an Economic Game</a></li>
+          <li><a href="#simultaneous-nash">3. Simultaneous Games & The Nash Equilibrium</a></li>
+          <li><a href="#prisoners-dilemma">4. The Prisoner’s Dilemma & Collective Action Breakdown</a></li>
+          <li><a href="#dynamic-games">5. Sequential Games, Backward Induction, and Subgame Perfection</a></li>
+          <li><a href="#asymmetric-info">6. Incomplete Information, Signaling, and Screening</a></li>
+          <li><a href="#mechanism-design">7. Mechanism Design & Auction Theory</a></li>
+          <li><a href="#macro-policy">8. Real-World Macroeconomic & Industrial Applications</a></li>
+        </ul>
+      </aside>
+
+      <section class="essay-body">
+        <section id="foundations">
+          <h2>1. Foundations: The Mathematical Architecture of Strategy</h2>
+          <p>
+            In standard neoclassical microeconomics, economic agents are traditionally modeled as price takers operating in perfectly competitive environments or as monopolists facing a passive market demand curve. In such frameworks, an individual firm or consumer makes optimization decisions without needing to anticipate the direct tactical reactions of individual competitors. However, the overwhelming majority of modern economic interactions—from corporate pricing battles and corporate mergers to trade negotiations and central banking commitments—take place in oligopolistic environments characterized by strategic interdependence.
+          </p>
+          <p>
+            Strategic interdependence occurs whenever the payoff of one economic actor is directly contingent upon the choices executed by other rational actors. The formal mathematical discipline designed to rigorously analyze these interdependent choices is <strong>Game Theory</strong>.
+          </p>
+          <p>
+            Pioneered by mathematician John von Neumann and economist Oskar Morgenstern in their seminal 1944 work, <em>Theory of Games and Economic Behavior</em>, and subsequently revolutionized by John Forbes Nash Jr. in 1950, game theory shifted economic analysis from static mechanical equilibria to dynamic interactive reasoning.
+          </p>
+        </section>
+
+        <section id="formal-elements">
+          <h2>2. The Formal Anatomy of an Economic Game</h2>
+          <p>
+            Every strategic setting in microeconomic theory can be formally characterized by four primitive mathematical components, denoted compactly as the strategic tuple:
+          </p>
+          <blockquote>
+            $$\Gamma = \langle N, \{S_i\}_{i \in N}, \{u_i\}_{i \in N} \rangle$$
+          </blockquote>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: #cbd5e1;">
+            <li style="margin-bottom: 0.6rem;">
+              <strong>Players ($N$):</strong> The set of autonomous, rational decision-makers indexed $i \in \{1, 2, \dots, n\}$.
+            </li>
+            <li style="margin-bottom: 0.6rem;">
+              <strong>Strategy Spaces ($S_i$):</strong> The set of all complete contingency plans available to player $i$. A particular chosen strategy is denoted $s_i \in S_i$, and a joint strategy profile across all players is denoted $s = (s_1, s_2, \dots, s_n) \in S$.
+            </li>
+            <li style="margin-bottom: 0.6rem;">
+              <strong>Payoff Functions ($u_i(s)$):</strong> The real-valued von Neumann-Morgenstern utility or economic profit that player $i$ receives when the strategy profile $s$ is played: $u_i: S \to \mathbb{R}$.
+            </li>
+            <li style="margin-bottom: 0.6rem;">
+              <strong>Information Structure:</strong> The specification of what each player knows regarding the rules, the history of prior plays, and the private types or payoffs of other players.
+            </li>
+          </ul>
+        </section>
+
+        <section id="simultaneous-nash">
+          <h2>3. Simultaneous Games & The Nash Equilibrium</h2>
+          <p>
+            The foundational solution concept in non-cooperative game theory is the <strong>Nash Equilibrium</strong>. In a simultaneous game, players choose their actions concurrently without observing the decisions of their rivals.
+          </p>
+          <div class="callout">
+            <div class="callout-title">Definition: Pure-Strategy Nash Equilibrium</div>
+            <p>
+              A strategy profile $s^* = (s_1^*, s_2^*, \dots, s_n^*) \in S$ is a Nash Equilibrium if and only if for every player $i \in N$ and for every alternative strategy $s_i \in S_i$:
+              <br><br>
+              $$u_i(s_i^*, s_{-i}^*) \ge u_i(s_i, s_{-i}^*)$$
+              <br>
+              where $s_{-i}^*$ represents the equilibrium strategies chosen by all players other than $i$.
+            </p>
+          </div>
+          <p>
+            In plain terms, a Nash Equilibrium represents a state of mutual consistency: no individual player has a unilateral incentive to deviate from their chosen strategy given the anticipated choices of their competitors. Nash proved that in any finite game with a finite number of players and pure strategies, there always exists at least one equilibrium in either pure or mixed (probabilistic) strategies.
+          </p>
+        </section>
+
+        <section id="prisoners-dilemma">
+          <h2>4. The Prisoner’s Dilemma & Collective Action Breakdown</h2>
+          <p>
+            Perhaps the most influential game in modern social science is the <strong>Prisoner's Dilemma</strong>, originally framed by Merrill Flood and Melvin Dresher in 1950 and formalized by Albert Tucker. It demonstrates the poignant tension between individual rationality and collective welfare.
+          </p>
+          <p>
+            Consider two competing duopolists (Firm 1 and Firm 2) deciding whether to maintain high cartel prices (<strong>Cooperate</strong>) or slash prices to capture market share (<strong>Defect</strong>).
+          </p>
+
+          <div class="matrix-container">
+            <table class="game-matrix">
+              <thead>
+                <tr>
+                  <th rowspan="2" style="vertical-align: middle;">Firm 1</th>
+                  <th colspan="2">Firm 2 Strategy</th>
+                </tr>
+                <tr>
+                  <th>Cooperate (High Price)</th>
+                  <th>Defect (Low Price)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Cooperate (High Price)</strong></td>
+                  <td>($10M, $10M)<br><em style="color: var(--text-muted);">Pareto Optimal</em></td>
+                  <td>($2M, $15M)<br><em style="color: var(--accent-rose);">Sucker Payoff</em></td>
+                </tr>
+                <tr>
+                  <td><strong>Defect (Low Price)</strong></td>
+                  <td>($15M, $2M)<br><em style="color: var(--accent-emerald);">Temptation Payoff</em></td>
+                  <td><strong>($5M, $5M)</strong><br><strong style="color: var(--accent-cyan);">Nash Equilibrium</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Analyzing Firm 1's incentives reveals why defection is a <strong>strictly dominant strategy</strong>:
+          </p>
+          <p>
+            If Firm 2 cooperates, Firm 1 earns $15M by defecting versus $10M by cooperating ($15M > $10M). If Firm 2 defects, Firm 1 earns $5M by defecting versus $2M by cooperating ($5M > $2M). Regardless of what Firm 2 decides, Firm 1 is strictly better off defecting. Because Firm 2 faces an identical symmetric payoff matrix, both players choose to defect, landing at the Nash equilibrium of <strong>($5M, $5M)</strong>.
+          </p>
+          <p>
+            Crucially, this equilibrium is <strong>Pareto-inefficient</strong>: both players would be strictly better off at ($10M, $10M). Unconstrained individual optimization leads to an inferior collective outcome. This analytical insight illuminates why OPEC cartels experience chronic quota cheating, why nations engage in wasteful arms races, and why common-pool environmental resources suffer over-exploitation (The Tragedy of the Commons).
+          </p>
+        </section>
+
+        <section id="dynamic-games">
+          <h2>5. Sequential Games, Backward Induction, and Subgame Perfection</h2>
+          <p>
+            When economic agents move chronologically rather than simultaneously, time and commitment enter the strategic equation. Sequential games are visually and mathematically analyzed using <strong>extensive form game trees</strong>.
+          </p>
+          <p>
+            In dynamic settings, not all Nash equilibria are economically credible. An established monopolist might announce a threat: <em>"If a new startup enters my market, I will engage in predatory pricing and slash prices below marginal cost, bankrupting us both."</em>
+          </p>
+          <p>
+            While this threat represents a formal Nash equilibrium if the entrant believes it, the threat is <strong>non-credible</strong>. Once the entrant actually enters the market, the incumbent’s rational, profit-maximizing response at that specific subgame is to accommodate the entrant rather than inflict catastrophic self-harm through a ruinous price war.
+          </p>
+          <div class="callout">
+            <div class="callout-title">Subgame Perfect Nash Equilibrium (SPNE)</div>
+            <p>
+              Formulated by Nobel laureate Reinhard Selten (1965), a Subgame Perfect Nash Equilibrium eliminates non-credible threats. An equilibrium is subgame perfect if players' strategies constitute a Nash equilibrium in <em>every single subgame</em> of the original extensive game. SPNE is systematically solved using <strong>backward induction</strong>—reasoning backwards from the terminal payoff nodes to the initial decision node.
+            </p>
+          </div>
+        </section>
+
+        <section id="asymmetric-info">
+          <h2>6. Incomplete Information, Signaling, and Screening</h2>
+          <p>
+            In the real economy, market participants rarely possess identical information. Sellers know the mechanical condition of their used cars better than buyers (George Akerlof’s 1970 <em>Market for Lemons</em>); loan applicants understand their default risk better than commercial banks (Joseph Stiglitz and Andrew Weiss); job applicants know their intrinsic work ethic better than prospective employers.
+          </p>
+          <h3>Michael Spence’s Job Market Signaling (1973)</h3>
+          <p>
+            How can an informed agent credibly communicate their hidden quality to an uninformed principal when words are cheap? Spence proved that communication is credible only if the signal is costly to acquire, and crucially, <strong>cheaper for high-productivity individuals to acquire than for low-productivity individuals</strong> (the <em>Single-Crossing Property</em>).
+          </p>
+          <p>
+            Even if an advanced academic degree provides zero vocational skills, talented workers pursue it because their psychic and cognitive costs of completing rigorous coursework are significantly lower. Employers recognize this cost differential and reward credentialed workers with higher wages, sustaining a separating equilibrium where signals successfully overcome adverse selection.
+          </p>
+        </section>
+
+        <section id="mechanism-design">
+          <h2>7. Mechanism Design & Auction Theory</h2>
+          <p>
+            While game theory traditional takes the rules of the game as given and predicts equilibrium behavior, <strong>Mechanism Design</strong> (often called "reverse game theory") inverts the question: given a desired social or economic outcome (such as allocative efficiency or revenue maximization), what rules, auction protocols, and incentive structures must a social planner engineer so that self-interested rational players voluntarily reveal their true private valuations?
+          </p>
+          <h3>Vickrey Auctions & Truthful Bidding</h3>
+          <p>
+            In a standard first-price sealed-bid auction, participants face an incentive to "shade" their bids below their true reservation prices to secure a profit margin. In contrast, William Vickrey (1961) demonstrated that in a <strong>second-price sealed-bid auction</strong> (where the highest bidder wins but pays the second-highest bid price), truth-telling is a weakly dominant strategy. A bidder has nothing to gain by overbidding (which risks buying at a loss) or underbidding (which risks losing a profitable acquisition without reducing the clearing price).
+          </p>
+          <p>
+            Vickrey's mathematical insights laid the groundwork for Paul Milgrom and Robert Wilson’s FCC radio spectrum auctions in the 1990s, generating hundreds of billions of dollars in public revenue while efficiently allocating electromagnetic frequencies to the most productive telecommunications operators.
+          </p>
+        </section>
+
+        <section id="macro-policy">
+          <h2>8. Real-World Macroeconomic & Industrial Applications</h2>
+          <p>
+            Game theory provides foundational explanatory power across macroeconomic and industrial policymaking:
+          </p>
+          <h3>1. Central Bank Independence & Time Inconsistency</h3>
+          <p>
+            Finn Kydland and Edward Prescott (1977) demonstrated that discretionary monetary policy suffers from a dynamic inconsistency game between the central bank and the wage-setting public. Before wages are negotiated, a central bank announces a zero-inflation target. Once nominal wage contracts are locked in, the monetary authority faces an opportunistic temptation to engineer surprise inflation to temporarily stimulate output and reduce unemployment.
+          </p>
+          <p>
+            Anticipating this incentive, rational workers bake higher inflation expectations into their contracts, resulting in higher inflation with no sustained gain in employment. The game-theoretic resolution to this credibility dilemma is institutional commitment: legally establishing an independent, conservative central bank bound by transparent policy rules (such as inflation targeting) rather than discretionary political whims.
+          </p>
+          <h3>2. Oligopoly Market Structures (Cournot vs. Bertrand)</h3>
+          <p>
+            Whether firms compete simultaneously on production quantity (Cournot competition) or price (Bertrand competition) fundamentally dictates consumer surplus, deadweight loss, and antitrust merger evaluation. In Bertrand price competition with homogeneous goods, even two symmetric firms will drive equilibrium prices down to marginal cost ($P = MC$), replicating the perfectly competitive outcome despite the absence of numerous market actors.
+          </p>
+          <p>
+            Through game theory, economics transcends abstract intuition, equipping economists with the rigorous mathematical toolkit needed to decode strategic conflict, engineer efficient markets, and design resilient economic policy.
+          </p>
+        </section>
+      </section>
+
+      <!-- Back to Projects CTA -->
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <a href="economics-in-one-lesson.html" class="btn btn-secondary">← Previous: Hazlitt's One Lesson</a>
+        <a href="../index.html#projects" class="btn btn-primary">Back to All Research →</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-quote">"Master Economics, the Simple Way."</div>
+      <div class="footer-copy">© 2026 Siwat Teimtad. Built with JetBrains Mono. Deployed on GitHub Pages.</div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top">↑</button>
+  <div id="toast"></div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
