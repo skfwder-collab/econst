@@ -1,14 +1,14 @@
-# Economist Portfolio Website: Implementation & Deployment Plan
+﻿# Economist Portfolio Website: Implementation & Deployment Plan
 
 ## 1. Project Overview & Requirements
-- **Owner**: Siwat Teimtad
-- **Email**: `dx@outlook.com`
+- **Owner**: Songkiat Panmart
+- **Email**: `skfwder@gmail.com`
 - **Hero Quote**: *"Master Economics, the Simple Way."*
 - **Visual Design**: Sleek modern dark theme (`#0d1117` base, `#161b22` cards, subtle borders `#30363d`), typography powered by **JetBrains Mono**.
 - **Branding**: Logo powered by `black.png`.
 - **Content Requirements**:
-  1. *Economics in One Lesson* (Henry Hazlitt, 1946) — Key economic concepts & modern implications (1,000+ words).
-  2. *Game Theory* — Strategic equilibrium, mechanisms, and macroeconomic applications (1,000+ words).
+  1. *Economics in One Lesson* (Henry Hazlitt, 1946) โ€” Key economic concepts & modern implications (1,000+ words).
+  2. *Game Theory* โ€” Strategic equilibrium, mechanisms, and macroeconomic applications (1,000+ words).
 - **Deployment Platform**: GitHub Pages (`https://<username>.github.io/<repository-name>/`).
 
 ---
@@ -19,19 +19,19 @@ A multi-page architecture ensures the 1,000+ word essays have room for clean for
 
 ```text
 my_first_website/
-│
-├── plan/
-│   └── our_plan.md                    # Saved roadmap & design plan
-├── index.html                         # Homepage: Hero, About Me, Contact, Project Previews
-├── style.css                          # Global Dark Theme + JetBrains Mono styling
-├── script.js                          # Smooth scrolling, mobile nav, copy-email helper
-├── black.png                          # Brand logo asset (with placeholder fallback)
-│
-├── projects/
-│   ├── economics-in-one-lesson.html   # Deep-dive essay (1,000+ words)
-│   └── game-theory.html               # Deep-dive essay (1,000+ words)
-│
-└── README.md                          # Repository documentation & local preview instructions
+โ”
+โ”โ”€โ”€ plan/
+โ”   โ””โ”€โ”€ our_plan.md                    # Saved roadmap & design plan
+โ”โ”€โ”€ index.html                         # Homepage: Hero, About Me, Contact, Project Previews
+โ”โ”€โ”€ style.css                          # Global Dark Theme + JetBrains Mono styling
+โ”โ”€โ”€ script.js                          # Smooth scrolling, mobile nav, copy-email helper
+โ”โ”€โ”€ black.png                          # Brand logo asset (with placeholder fallback)
+โ”
+โ”โ”€โ”€ projects/
+โ”   โ”โ”€โ”€ economics-in-one-lesson.html   # Deep-dive essay (1,000+ words)
+โ”   โ””โ”€โ”€ game-theory.html               # Deep-dive essay (1,000+ words)
+โ”
+โ””โ”€โ”€ README.md                          # Repository documentation & local preview instructions
 ```
 
 ---
@@ -63,10 +63,10 @@ flowchart TD
 ## 4. Content Architecture (1,000+ Words Each)
 
 ### Project 1: *Key Economic Concepts of Economics in One Lesson (Henry Hazlitt, 1946)*
-- **Word Target**: 1,000–1,200 words.
+- **Word Target**: 1,000โ€“1,200 words.
 - **Key Modules**:
   1. **The Core Lesson**: Tracing secondary and long-term consequences across all groups rather than immediate effects on special interests.
-  2. **The Broken Window Fallacy**: Frédéric Bastiat's foundation; unseen destruction vs. seen economic activity.
+  2. **The Broken Window Fallacy**: Frรฉdรฉric Bastiat's foundation; unseen destruction vs. seen economic activity.
   3. **The Mirage of Public Works**: Government expenditure as capital reallocation, funded through compulsory taxation rather than net wealth creation.
   4. **Tariffs and Special Interests**: The illusion of domestic protection and the unseen destruction of export industries.
   5. **Price Controls & Minimum Wage**: Shortages, black markets, and marginal productivity disincentives.
@@ -74,12 +74,12 @@ flowchart TD
   7. **Modern Relevance**: Analysis of Hazlitt's framework in today's stimulus packages and industrial policy.
 
 ### Project 2: *Game Theory: Strategic Interaction, Equilibrium, and Economic Policy*
-- **Word Target**: 1,000–1,200 words.
+- **Word Target**: 1,000โ€“1,200 words.
 - **Key Modules**:
   1. **Foundations**: von Neumann, Morgenstern, and John Nash; defining rational actors, strategies, and payoffs.
-  2. **Simultaneous Games & Nash Equilibrium**: Strict dominance, the Prisoner’s Dilemma, and cooperative breakdown.
+  2. **Simultaneous Games & Nash Equilibrium**: Strict dominance, the Prisonerโ€s Dilemma, and cooperative breakdown.
   3. **Dynamic & Sequential Games**: Extensive form representation, backward induction, subgame perfection, and credible threats.
-  4. **Information Asymmetry & Signaling**: Michael Spence’s signaling model, adverse selection in markets (Akerlof’s Lemons), and moral hazard.
+  4. **Information Asymmetry & Signaling**: Michael Spenceโ€s signaling model, adverse selection in markets (Akerlofโ€s Lemons), and moral hazard.
   5. **Mechanism Design & Auctions**: Vickrey auctions, English/Dutch formats, and revenue equivalence theorem.
   6. **Real-World Economic Applications**:
      - Oligopoly competition (Cournot vs. Bertrand).
@@ -106,19 +106,19 @@ flowchart LR
 - **Navigation**: Clean header with logo (`black.png`) and smooth-scroll anchors.
 - **Hero Section**:
   - Quote: *"Master Economics, the Simple Way."*
-  - Subtitle: Economic Research, Classical Principles, and Strategic Modeling by Siwat Teimtad.
+  - Subtitle: Economic Research, Classical Principles, and Strategic Modeling by Songkiat Panmart.
   - Call-to-action buttons (`Explore Research`, `Contact`).
 - **Featured Research**: Two high-impact cards previewing the two major essays with reading time badges (~5-6 min read).
 - **About Me & Contact**:
-  - Bio introducing Siwat Teimtad as an economist.
-  - Contact card featuring `dx@outlook.com` with a one-click copy button and direct `mailto:` link.
+  - Bio introducing Songkiat Panmart as an economist.
+  - Contact card featuring `skfwder@gmail.com` with a one-click copy button and direct `mailto:` link.
 
 ### Phase 3: Comprehensive Essay Pages
 - Write `projects/economics-in-one-lesson.html` complete with navigation breadcrumbs, callout boxes, and full 1,000+ word essay.
 - Write `projects/game-theory.html` with payoff matrix tables, strategic decision trees, and full 1,000+ word essay.
 
 ### Phase 4: Interactivity & Polish (`script.js`)
-- Copy-to-clipboard functionality for `dx@outlook.com` with interactive toast notification.
+- Copy-to-clipboard functionality for `skfwder@gmail.com` with interactive toast notification.
 - Reading progress bar or table-of-contents navigation for the long-form essays.
 
 ### Phase 5: GitHub Pages Deployment

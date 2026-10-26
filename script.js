@@ -1,6 +1,6 @@
-// Siwat Teimtad | Economist Portfolio Script
+// Songkiat Panmart | Economist Portfolio Script
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Reading Progress Indicator
+  // 1. Reading Progress Indicator & Back to Top
   const progressBar = document.getElementById('progress-bar');
   const backToTopBtn = document.getElementById('back-to-top');
 
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyBtn) {
     copyBtn.addEventListener('click', async () => {
-      const email = 'dx@outlook.com';
+      const email = 'skfwder@gmail.com';
       try {
         await navigator.clipboard.writeText(email);
-        showToast('✓ Copied dx@outlook.com to clipboard!');
+        showToast('✓ Copied skfwder@gmail.com to clipboard!');
       } catch (err) {
         // Fallback for older browsers
         const textarea = document.createElement('textarea');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textarea.select();
         document.execCommand('copy');
         document.body.removeChild(textarea);
-        showToast('✓ Copied dx@outlook.com to clipboard!');
+        showToast('✓ Copied skfwder@gmail.com to clipboard!');
       }
     });
   }
