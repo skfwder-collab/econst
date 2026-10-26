@@ -1,153 +1,171 @@
-﻿# Economist Portfolio Website: Implementation & Deployment Plan
+# Economist Portfolio Website: Implementation & Deployment Plan
 
-## 1. Project Overview & Requirements
-- **Owner**: Songkiat Panmart
-- **Email**: `skfwder@gmail.com`
-- **Hero Quote**: *"Master Economics, the Simple Way."*
-- **Visual Design**: Sleek modern dark theme (`#0d1117` base, `#161b22` cards, subtle borders `#30363d`), typography powered by **JetBrains Mono**.
-- **Branding**: Logo powered by `black.png`.
-- **Content Requirements**:
-  1. *Economics in One Lesson* (Henry Hazlitt, 1946) โ€” Key economic concepts & modern implications (1,000+ words).
-  2. *Game Theory* โ€” Strategic equilibrium, mechanisms, and macroeconomic applications (1,000+ words).
-- **Deployment Platform**: GitHub Pages (`https://<username>.github.io/<repository-name>/`).
+**Author & Economist**: Songkiat Panmart  
+**Contact Email**: `skfwder@gmail.com`  
+**Brand Logo**: `black.png`  
+**Hero Quote**: *"Master Economics, the Simple Way."*  
+**Platform**: GitHub Pages (`https://<username>.github.io/<repo-name>/`)  
 
 ---
 
-## 2. Architecture & File Structure
+## 1. Project Overview & Specifications
 
-A multi-page architecture ensures the 1,000+ word essays have room for clean formatting, mathematical formulas, charts, and citations without cluttering the homepage.
+This plan details the complete end-to-end process to construct, polish, and deploy an academic and strategic portfolio website on GitHub Pages tailored for an economist.
+
+### Core Specifications
+| Item | Specification |
+| :--- | :--- |
+| **Typography** | Google Fonts: **JetBrains Mono** (monospace font tailored for analytical clarity) |
+| **Theme / Palette**| Modern Dark Slate (`#090d13` base background, `#121820` surface cards, `#232f3e` border accents, `#58a6ff` primary accent) |
+| **Branding** | Minimalist logo using `black.png` with high-contrast framing |
+| **Hero Section** | Prominently feature the personal motto: *"Master Economics, the Simple Way."* with clear CTA navigation |
+| **About / Contact**| Profile section featuring **Songkiat Panmart**, research interests, and direct email link to `skfwder@gmail.com` with one-click copy helper |
+| **Research Projects** | 4 comprehensive, research-grade essays (each **>= 1,000 words**), formatted with executive summaries, theoretical frameworks, data/policy evaluations, and citations |
+
+---
+
+## 2. Information Architecture & Directory Layout
+
+To maintain high page performance and readability, a **multi-page static architecture** is used. The homepage provides an executive overview and project showcase cards, leading into dedicated deep-dive article pages.
 
 ```text
 my_first_website/
-โ”
-โ”โ”€โ”€ plan/
-โ”   โ””โ”€โ”€ our_plan.md                    # Saved roadmap & design plan
-โ”โ”€โ”€ index.html                         # Homepage: Hero, About Me, Contact, Project Previews
-โ”โ”€โ”€ style.css                          # Global Dark Theme + JetBrains Mono styling
-โ”โ”€โ”€ script.js                          # Smooth scrolling, mobile nav, copy-email helper
-โ”โ”€โ”€ black.png                          # Brand logo asset (with placeholder fallback)
-โ”
-โ”โ”€โ”€ projects/
-โ”   โ”โ”€โ”€ economics-in-one-lesson.html   # Deep-dive essay (1,000+ words)
-โ”   โ””โ”€โ”€ game-theory.html               # Deep-dive essay (1,000+ words)
-โ”
-โ””โ”€โ”€ README.md                          # Repository documentation & local preview instructions
+│
+├── index.html                           # Homepage (Hero, About Songkiat Panmart, 4 Project Cards, Contact)
+├── style.css                            # Unified stylesheet (JetBrains Mono, dark palette, responsive layouts)
+├── script.js                            # Navigation logic, reading progress indicators, clipboard utilities
+├── black.png                            # Primary logo icon
+├── README.md                            # Project documentation & local running instructions
+│
+├── plan/
+│   └── our_plan.md                      # Strategic architectural roadmap & deployment guide
+│
+└── projects/
+    ├── economics-in-one-lesson.html     # Essay 1: Hazlitt's Framework (1,693 words)
+    ├── game-theory.html                 # Essay 2: Strategic Interaction & Policy (1,632 words)
+    ├── climate-change-thailand.html     # Essay 3: Low-Carbon Transition in Thailand (2,223 words)
+    └── internet-access-thailand.html    # Essay 4: Digital Infrastructure & Divide in Thailand (1,879 words)
 ```
 
 ---
 
-## 3. UI/UX & Design System
+## 3. The 4 Research Projects Breakdown (1,000+ Words Each)
 
 ```mermaid
 flowchart TD
-    subgraph Design System
-        A["Font: JetBrains Mono (Google Fonts)"]
-        B["Palette: Slate Dark (#0a0d12, #161b22, #30363d)"]
-        C["Accents: Emerald (#2ea043) / Blue (#58a6ff)"]
-        D["Components: Clean Cards, Code-style Tags, Prose Containers"]
+    subgraph Portfolio Research Suite
+        P1["1. Economics in One Lesson<br><i>Hazlitt (1946) & Policy Tradeoffs</i>"]
+        P2["2. Applied Game Theory<br><i>Equilibria, Mechanism Design & Strategy</i>"]
+        P3["3. Climate Change Mitigation in Thailand<br><i>Low-Carbon Transition & Green Finance</i>"]
+        P4["4. Driving Internet Access in Thailand<br><i>Infrastructure, Digital Divide & Regulation</i>"]
     end
 ```
 
-- **Typography**: Google Fonts `@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');`
-- **Dark Palette**:
-  - Background: `#090d13`
-  - Surface / Cards: `#121820`
-  - Border: `#232f3e`
-  - Text Primary: `#e6edf3`
-  - Text Muted: `#8b949e`
-  - Accent / Links: `#58a6ff` and `#3fb950`
-- **Header**: Sticky navigation bar with `black.png` logo, Home, Projects, About, and Contact links.
+### Project 1: Key Economic Concepts of *Economics in One Lesson* (Henry Hazlitt, 1946)
+- **Status**: Complete (~1,693 words)
+- **Key Modules**:
+  1. **The Core Axiom**: Looking not merely at immediate, short-run effects for single groups, but at secondary, long-term consequences for all groups.
+  2. **The Broken Window Fallacy**: Frédéric Bastiat’s unseen opportunity cost applied to post-disaster stimulus myths.
+  3. **The Mirage of Public Works**: Fiscal reallocation vs. organic capital formation; tax-funded distortion.
+  4. **Tariffs and Special Protectionism**: Concentrated benefits vs. diffused burdens on the domestic export base.
+  5. **Price Controls & Minimum Wage Mandates**: Artificially fixed prices generating deadweight loss and marginal worker exclusion.
+  6. **Inflationary Wealth Dissipation**: Cantillon effect and covert purchasing-power erosion.
+  7. **Contemporary Policy Lessons**: Evaluating modern quantitative easing and subsidy programs through Hazlitt's lens.
+
+### Project 2: Game Theory: Strategic Interaction, Equilibrium, and Economic Policy
+- **Status**: Complete (~1,632 words)
+- **Key Modules**:
+  1. **Foundational Axioms**: von Neumann, Morgenstern, and John Nash; strategic forms, rationality, and payoff matrices.
+  2. **Simultaneous Play & Nash Equilibrium**: Dominant strategies, Prisoner's Dilemma, and collective action failures.
+  3. **Sequential Games & Subgame Perfection**: Extensive-form trees, backward induction, and credible threat credibility.
+  4. **Information Asymmetry & Market Signaling**: Akerlof’s adverse selection, Spence’s job-market signaling, and moral hazard.
+  5. **Mechanism Design & Auction Theory**: Vickrey-Clarke-Groves (VCG) mechanisms, Dutch/English auctions, and revenue equivalence.
+  6. **Macroeconomic & Industrial Applications**: Cartel stability (OPEC), oligopoly pricing (Cournot vs. Bertrand), and central bank forward guidance.
+
+### Project 3: Strategic Management for Climate Change Mitigation and Low-Carbon Transition in Thailand
+- **Status**: Complete (~2,223 words)
+- **Key Modules**:
+  1. **Macroeconomic Context**: Thailand's COP26/COP28 commitments (carbon neutrality by 2050, net-zero GHG emissions by 2065).
+  2. **The Bio-Circular-Green (BCG) Economic Model**: Strategic policy framework converting agricultural and manufacturing waste into high-value outputs.
+  3. **Market Mechanisms & Carbon Pricing**: Voluntary Emissions Trading Scheme (Thailand V-ETS), Thailand Voluntary Emission Reduction Program (T-VER), and the economic viability of a national carbon tax.
+  4. **Power Development Plan (PDP) & Grid Decarbonization**: Renewable energy penetration (solar, biomass), grid modernization, and phasing down coal/gas dependency.
+  5. **Industrial Decarbonization & Trade Vulnerabilities**: The EU Carbon Border Adjustment Mechanism (CBAM) impact on Thai exports (steel, cement, aluminum).
+  6. **Green Finance & Strategic Recommendations**: Taxonomy for sustainable financing, ESG incentives, and public-private partnership (PPP) structures.
+
+### Project 4: Driving Internet Access in Thailand: Infrastructure, Strategic Opportunities, and Challenges in the Digital Age
+- **Status**: Complete (~1,879 words)
+- **Key Modules**:
+  1. **Infrastructure Landscape**: Fixed broadband penetration vs. mobile broadband adoption; submarine cable gateways and nationwide fiber rollouts.
+  2. **The Urban-Rural Digital Divide**: Analysis of regional disparities across Bangkok Metropolitan Region versus northern/northeastern provinces.
+  3. **Universal Service Obligation (USO) & Net Pracharat**: Public infrastructure programs, capital expenditure allocation, and municipal Wi-Fi efficiency.
+  4. **Market Concentration & Regulatory Dynamics**: NBTC regulatory oversight, merger of True and Dtac, duopoly market structure, and retail pricing pressures.
+  5. **Economic Multipliers**: Digital economy expansion, PromptPay / digital wallet adoption, e-commerce growth in MSMEs, and digital labor markets.
+  6. **Policy Recommendations**: Spectrum allocation auctions, open-access middle-mile fiber, digital literacy initiatives, and next-gen cross-border data corridor integration.
 
 ---
 
-## 4. Content Architecture (1,000+ Words Each)
+## 4. Design System & User Interface
 
-### Project 1: *Key Economic Concepts of Economics in One Lesson (Henry Hazlitt, 1946)*
-- **Word Target**: 1,000โ€“1,200 words.
-- **Key Modules**:
-  1. **The Core Lesson**: Tracing secondary and long-term consequences across all groups rather than immediate effects on special interests.
-  2. **The Broken Window Fallacy**: Frรฉdรฉric Bastiat's foundation; unseen destruction vs. seen economic activity.
-  3. **The Mirage of Public Works**: Government expenditure as capital reallocation, funded through compulsory taxation rather than net wealth creation.
-  4. **Tariffs and Special Interests**: The illusion of domestic protection and the unseen destruction of export industries.
-  5. **Price Controls & Minimum Wage**: Shortages, black markets, and marginal productivity disincentives.
-  6. **Inflation as Covert Wealth Redistribution**: Cantillon effects, purchasing power dilution, and moral hazard.
-  7. **Modern Relevance**: Analysis of Hazlitt's framework in today's stimulus packages and industrial policy.
+### Typography
+- Google Font: `JetBrains Mono`
+- Monospace styling ensures code blocks, mathematical notations, economic equations, and data tables look sharp and legible.
 
-### Project 2: *Game Theory: Strategic Interaction, Equilibrium, and Economic Policy*
-- **Word Target**: 1,000โ€“1,200 words.
-- **Key Modules**:
-  1. **Foundations**: von Neumann, Morgenstern, and John Nash; defining rational actors, strategies, and payoffs.
-  2. **Simultaneous Games & Nash Equilibrium**: Strict dominance, the Prisonerโ€s Dilemma, and cooperative breakdown.
-  3. **Dynamic & Sequential Games**: Extensive form representation, backward induction, subgame perfection, and credible threats.
-  4. **Information Asymmetry & Signaling**: Michael Spenceโ€s signaling model, adverse selection in markets (Akerlofโ€s Lemons), and moral hazard.
-  5. **Mechanism Design & Auctions**: Vickrey auctions, English/Dutch formats, and revenue equivalence theorem.
-  6. **Real-World Economic Applications**:
-     - Oligopoly competition (Cournot vs. Bertrand).
-     - OPEC quota enforcement and cartel stability.
-     - Central bank credibility and forward guidance.
-
----
-
-## 5. Phased Implementation Roadmap
-
-```mermaid
-flowchart LR
-    Step1["1. Setup & Styling<br>(CSS + JetBrains Mono)"] --> Step2["2. Homepage Construction<br>(Hero, About, Contact)"]
-    Step2 --> Step3["3. Project 1 Content<br>(Hazlitt Essay 1,000+ words)"]
-    Step3 --> Step4["4. Project 2 Content<br>(Game Theory 1,000+ words)"]
-    Step4 --> Step5["5. Polish & Deploy<br>(GitHub Pages)"]
+### Color Tokens
+```css
+:root {
+  --bg-primary: #090d13;
+  --bg-secondary: #121820;
+  --bg-card: #161f2c;
+  --border-color: #233144;
+  --border-hover: #388bfd;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --accent-cyan: #38bdf8;
+  --accent-blue: #58a6ff;
+  --accent-green: #3fb950;
+  --font-family: 'JetBrains Mono', monospace;
+}
 ```
 
-### Phase 1: Global Theme & Base Assets
-- Create `style.css` with dark theme variables, JetBrains Mono typography, responsive grid system, and essay-reading typography styles.
-- Create initial placeholder for `black.png` to avoid broken image icons until your custom logo is placed.
-
-### Phase 2: Landing Page (`index.html`)
-- **Navigation**: Clean header with logo (`black.png`) and smooth-scroll anchors.
-- **Hero Section**:
-  - Quote: *"Master Economics, the Simple Way."*
-  - Subtitle: Economic Research, Classical Principles, and Strategic Modeling by Songkiat Panmart.
-  - Call-to-action buttons (`Explore Research`, `Contact`).
-- **Featured Research**: Two high-impact cards previewing the two major essays with reading time badges (~5-6 min read).
-- **About Me & Contact**:
-  - Bio introducing Songkiat Panmart as an economist.
-  - Contact card featuring `skfwder@gmail.com` with a one-click copy button and direct `mailto:` link.
-
-### Phase 3: Comprehensive Essay Pages
-- Write `projects/economics-in-one-lesson.html` complete with navigation breadcrumbs, callout boxes, and full 1,000+ word essay.
-- Write `projects/game-theory.html` with payoff matrix tables, strategic decision trees, and full 1,000+ word essay.
-
-### Phase 4: Interactivity & Polish (`script.js`)
-- Copy-to-clipboard functionality for `skfwder@gmail.com` with interactive toast notification.
-- Reading progress bar or table-of-contents navigation for the long-form essays.
-
-### Phase 5: GitHub Pages Deployment
-- Initialize Git repository and commit all files.
-- Push to GitHub repository.
-- Enable GitHub Pages from repository settings pointing to root (`/`).
+### Components
+1. **Sticky Header**: Includes `black.png` avatar, site identity, navigation links, and quick contact button.
+2. **Hero Section**: 
+   - Badge containing: *"Master Economics, the Simple Way."*
+   - Title: **Songkiat Panmart** — *Economist & Policy Strategist*
+   - Action buttons: "Explore Research", "About Me", "Contact".
+3. **Research Showcase**: 4 responsive cards featuring tags, excerpt summaries, word counts, and direct links to each full essay.
+4. **About & Contact**: Professional bio of Songkiat Panmart, core economic domains, and an email contact button with copy-to-clipboard functionality (`skfwder@gmail.com`).
+5. **Article Templates**: Reading progress bar, article metadata (author, reading time, date), structured table of contents, high-readability prose container, and back-to-home navigation.
 
 ---
 
-## 6. Deployment Instructions (GitHub Pages)
+## 5. Step-by-Step GitHub Pages Deployment
 
-Once files are generated:
+```mermaid
+flowchart TD
+    S1["1. Local Git Commit<br>Stage all files in main"] --> S2["2. Push to Remote<br>git push origin main"]
+    S2 --> S3["3. Repo Settings > Pages<br>Source: Deploy from branch"]
+    S3 --> S4["4. Select Branch: main / (root)<br>Click Save"]
+    S4 --> S5["5. Live at:<br>https://skfwder-collab.github.io/econst/"]
+```
 
-```bash
-# 1. Initialize local repository
-git init
+### Git Commands
+```powershell
+# In project root: C:\Data\Onedrive\my_first_website
 git add .
-git commit -m "feat: complete economist portfolio with Hazlitt and Game Theory projects"
-
-# 2. Link to your GitHub repository
+git commit -m "feat: complete Songkiat Panmart economist portfolio with 4 research projects"
 git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-
-# 3. Push to GitHub
+git remote add origin https://github.com/skfwder-collab/econst.git
 git push -u origin main
 ```
 
-**In GitHub Settings:**
-1. Navigate to **Settings** > **Pages**.
-2. Under **Build and deployment**, set Source to `Deploy from a branch`.
-3. Select branch `main` and directory `/(root)`.
-4. Click **Save**. Site will be live at `https://<your-username>.github.io/<your-repo-name>/`.
+### GitHub Pages Activation
+1. Navigate to **https://github.com/skfwder-collab/econst/settings/pages**.
+2. Under **Build and deployment**:
+   - **Source**: Select `Deploy from a branch`.
+   - **Branch**: Select `main`, folder `/(root)`.
+   - Click **Save**.
+3. Live site URL:
+   ```text
+   https://skfwder-collab.github.io/econst/
+   ```
